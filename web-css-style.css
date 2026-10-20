@@ -1,0 +1,760 @@
+@charset "UTF-8";
+
+body {
+	font-family: "DM Sans", sans-serif;
+	margin-bottom: 10px;
+	font-size: 1.4vw;
+	margin: 0;
+}
+
+.heroh1 {
+
+  font-family: "Valley Sans", sans-serif;
+  font-optical-sizing: 7em;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px;
+	
+}
+
+
+h1 {
+  font-family: "Valley Sans", sans-serif;
+  font-optical-sizing: 5em;
+  font-weight: 800;
+  font-style: normal;
+  margin: 10px
+}
+
+h2 {
+	font-family: "Valley Sans", sans-serif;
+  font-size: 2em;
+  font-weight: 500px;
+  font-style: normal;}
+
+h3 {font-family: "DM Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100px;
+  font-style: normal;
+  margin-bottom: 10px;
+  margin-top: 30px
+}
+
+
+
+
+
+section {
+	padding: 10%;
+}
+
+/*section with flexbox*/ 
+.flexContainer {
+	display: flex;
+	background-color:#777777;
+	justify-content: center;
+	flex-direction: row;
+	}
+
+/*nested within*/
+.flexContainer div {
+	padding: 5%;
+	
+}
+
+/*Contact Form*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #0b5777;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.columnRight { 
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.columnLeft {
+float: left;
+  width: 30%;
+  margin-top: 6px;
+  padding: 20px;	
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+	
+	
+	div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+	
+h2, p {
+  margin: 10px;
+}
+
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topna v li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #0b5777;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+.sectionBG {
+	background-color: #193153 ;
+	overflow: auto;
+	}
+	
+	
+	.boxsizing {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.twocolumn {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.float-right-img {
+  float: right;       /* Floats the image to the right */
+  margin-left: 15px;  /* Pushes text away from the left edge of the image */
+  margin-bottom: 15px;/* Pushes content away from the bottom edge */
+  width: 35%;       /* Optional: controls the image size */
+}
+
+.content-box {
+  display: flow-root; 
+}
+
+.button {
+  font-family: "Valley Sans", sans-serif; 
+  background-color: #0b5777;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  margin-top: 5em;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.background-image {
+	background-image: url("images/AboutMeCover.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	weight: 100%;
+	height: 500px;
+}
+
+.grid-image {
+	background-image: url("images/css-pattern-by-magicpattern copy.png");
+	background-size: 35%;
+	background-repeat: repeat;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.45);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.line {
+  border: 2px solid #000000;
+}
+
+.hrstyle{
+	padding-bottom: 3em;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: calc(25% - 20px);
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  div.gallery-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div.gallery-item {
+    width: calc(100% - 20px);
+  }
+}
+
+.subtitle {font-family: "DM Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 100px;
+  font-style: normal;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.hero{
+	background-image: url(images/Web-Landing-Page copy.png");
+	background-repeat: no-repeat;
+	object-fit: cover;
+	height: 500px;
+	width: 100%;
+}
+
+.hero2{
+	background-image: url("images/gradient2.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    height: 650px;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding-bottom: 350px;
+}
+
+.background-gradient{
+	background-image: url("images/gradient.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.background-image{
+	background-image: url("images/Web-Landing-Page copy.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+    width: 100%;
+    aspect-ratio: 1366 / 768;
+	
+}
+
+.centerimage {
+	display: flex;
+	justify-content: center;
+}
+
+.alignleftimage {
+	float: left;
+	padding-right: 40px;
+	padding-bottom: 30px;
+	}
+
+.center-text {
+	display: flex;
+	justify-content: center;
+}
+
+.grid-content > p:first-of-type{
+	margin-top: 5px;
+}
+
+.grid-content > p:last-of-type{
+	margin-bottom: 5px;
+}
+
+.grid-container {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	justify-content: center;
+	margin-left: 10px;
+	}
+
+.grid-item {
+	height: 1000px;}
+
+.grid-content {
+	font-family:"DM Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: 100px;
+    font-style: normal;
+    margin-bottom: 10px;
+    margin-top: 5px;
+	margin-left: 5px;
+	overflow: auto;
+}
+
+body{
+	background-image: url("images/css-pattern-by-magicpattern copy.png");
+	background-repeat: repeat;
+	background-size: 25%;
+	}
+
+.fh1 {
+  font-family: "Valley Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.75); /* White with 75% opacity */
+  font-size: 2em;                    /* Fixed font size property */
+  font-weight: 700;
+  font-style: normal;
+  margin: 20px;
+}
+
+.fh4 {
+	font-family: "Valley Sans", sans-serif;
+    color: rgba(255, 255, 255, 0.75); /* Matches color & 75% opacity */
+    font-weight: 700;
+    font-style: normal;
+    margin: 20px;              /* Resets left margin to align edges cleanly */
+    text-align: left;   
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* left links | logo | right links */
+  align-items: center;
+  padding: 18px 48px;
+  background: rgba(255, 255, 255, 0);    /* transparent */
+  backdrop-filter: blur(8px);            /* soft blur so links stay readable over content */
+  -webkit-backdrop-filter: blur(8px);
+}
+.navbar .links { display: flex; gap: 32px; }
+.navbar .links.right { justify-content: flex-end; }
+.navbar .links a { font-size: 16px; transition: opacity .2s; }
+.navbar .links a:hover { opacity: .55; }
+.navbar .logo { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px 100px;
+  text-align: center;
+}
+.about p { font-size: 22px; font-weight: 300; margin-top: 18px; }
+
+.footer {
+  text-align: center;
+  padding: 36px 20px 48px;
+  font-size: 14px;
+  border-top: 1px solid var(--ink);
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--steel));
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.navbar a,
+.navbar a:link,
+.navbar a:visited {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+.navbar a:hover {
+  opacity: .55;
+}
+.navbar .logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.pc-tags { margin: 14px 10px 0; }
+.pc-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 14px;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+.pc-tag.apex { background: var(--pink-soft); color: var(--ink);  transform: rotate(-3deg); }
+.pc-tag.tail { background: var(--navy);      color: #ffffff;     transform: rotate(3deg); }
+ 
+/* ---------- 4. GRADIENT DIVIDER LINE (use on <hr>) ---------- */
+.pc-rule {
+  display: block;
+  border: 0;
+  height: 4px;
+  border-radius: 999px;
+  background: #b58fd8;                                            /* fallback: solid purple */
+  background: linear-gradient(90deg, #f4c9dd, #b58fd8, #4a7a96);  /* gradient (pink > purple > blue) */
+}
+ 
+/* ---------- 5. SMALL PILL LABEL (use on "The Brief" headings) ---------- */
+.pc-label {
+  display: inline-block;
+  padding: 6px 18px;
+  background: var(--pink-soft);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+ 
+/* ---------- 6. BLACK PILL BUTTON ---------- */
+.pc-btn,
+.pc-btn:link,
+.pc-btn:visited {
+  display: inline-block;
+  margin: 24px 10px 0;
+  padding: 16px 38px;
+  background: var(--ink);
+  color: var(--pink);
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform .2s;
+}
+.pc-btn:hover { transform: translateY(-3px); }
+ 
+/* ---------- 7. POSTCARD CARDS (use with gallery-item) ---------- */
+.gallery-item.pc-card {
+  margin: 8px;
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(31, 45, 82, .16);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.gallery-item.pc-card:nth-child(odd)  { transform: rotate(-1.5deg); }
+.gallery-item.pc-card:nth-child(even) { transform: rotate(1.5deg) translateY(14px); }
+.gallery-item.pc-card:hover {
+  border: none;
+  transform: rotate(0) translateY(-6px);
+  box-shadow: 0 20px 40px rgba(31, 45, 82, .24);
+}
+.gallery-item.pc-card img { display: block; }
+ 
+/* ---------- 8. SLIDESHOW FRAME ---------- */
+.slideshow-container.pc-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(31, 45, 82, .16);
+}
+ 
+/* gradient pill dots (put class pc-dots on the dots wrapper) */
+.pc-dots .dot { transition: background .4s ease, width .4s ease; }
+.pc-dots .dot.active,
+.pc-dots .dot:hover {
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+}
+.pc-dots .dot.active { width: 28px; border-radius: 999px; }
+ 
+/* ---------- 9. CURRENT-PAGE PILL IN THE NAVBAR ---------- */
+.navbar .links { align-items: center; }   /* keeps the pill and plain links on one line */
+.navbar .links a.current {
+  background: var(--pink-soft);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+ 
+
+.columnRight form {
+  position: relative;
+  padding: 40px 40px 24px;
+  border-radius: 18px;
+  background: #ffffff;                                             /* fallback */
+  background: linear-gradient(90deg, #f4c9dd, #b58fd8, #4a7a96) top left / 100% 6px no-repeat, #ffffff;
+  box-shadow: 0 14px 34px rgba(31, 45, 82, .16);
+}
+ 
+/* center the card on the page (auto left/right margins) */
+.row .columnRight {
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+/* labels: small, spaced capitals, like the tags */
+.columnRight label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #1f2d52;
+}
+ 
+/* inputs: rounded, light blue "blueprint" border, purple glow when clicked */
+.columnRight input[type=text],
+.columnRight select,
+.columnRight textarea {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: #0a0a0a;
+  background: #fbfdff;
+  border: 1.5px solid #cfe3f3;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.columnRight input[type=text]:focus,
+.columnRight select:focus,
+.columnRight textarea:focus {
+  outline: none;
+  border-color: #b58fd8;
+  box-shadow: 0 0 0 4px rgba(181, 143, 216, .25);
+}
+.columnRight input::placeholder,
+.columnRight textarea::placeholder {
+  color: #8f98b3;
+}
+ 
+/* submit: black pill with pink text, same as the "Next Project" button */
+.columnRight input[type=submit] {
+  margin-top: 8px;
+  padding: 16px 38px;
+  background: #0a0a0a;
+  color: #f4c9dd;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  border-radius: 999px;
+  transition: transform .2s;
+}
+.columnRight input[type=submit]:hover {
+  background: #0a0a0a;
+  transform: translateY(-3px);
+}
+ 
+/* phones and small tablets: full-width card */
+@media only screen and (max-width: 768px) {
+  .row .columnRight { width: 100%; }
+  .columnRight form { padding: 32px 22px 20px; }
+}
+
+.button a,
+.button a:link,
+.button a:visited {
+  color: #ffffff;
+  text-decoration: none;

@@ -1,0 +1,302 @@
+/* ==========================================================
+   POSTCARD GALLERY TEMPLATE  -  style.css
+   Plain CSS only. No JavaScript needed.
+   Colors and elements taken from the "Understanding Design
+   Principles" page: grid paper background, pink -> purple ->
+   navy gradient, black pill button, APEX / TAIL tags.
+   ========================================================== */
+
+/* ---------- 1. COLORS (change these to restyle everything) ---------- */
+:root {
+  --ink: #0a0a0a;            /* main text + button */
+  --paper: #ffffff;          /* page background */
+  --grid: #e6f3fb;           /* faint grid lines */
+  --pink: #f4c9dd;           /* tag + button text */
+  --pink-soft: #f7dbe8;
+  --purple: #b58fd8;
+  --navy: #1f2d52;
+  --steel: #4a7a96;
+  --blue-line: #6bb8f5;      /* blueprint accent lines */
+  --radius: 18px;
+}
+
+/* ---------- 2. BASE ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", "Valley Sans", Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--paper);
+  /* the grid paper */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 30px 30px;
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- 3. NAVBAR (sticky + transparent) ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;   /* left links | logo | right links */
+  align-items: center;
+  padding: 18px 48px;
+  background: rgba(255, 255, 255, 0);    /* transparent */
+  backdrop-filter: blur(8px);            /* soft blur so links stay readable over content */
+  -webkit-backdrop-filter: blur(8px);
+}
+.navbar .links { display: flex; gap: 32px; }
+.navbar .links.right { justify-content: flex-end; }
+.navbar .links a { font-size: 16px; transition: opacity .2s; }
+.navbar .links a:hover { opacity: .55; }
+.navbar .logo { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+
+/* ---------- 4. HERO ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 48px 80px;
+  min-height: 80vh;
+}
+.hero h1 {
+  font-size: clamp(48px, 7vw, 104px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.hero .subtitle {
+  margin-top: 28px;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 300;
+}
+
+/* black pill button */
+.btn {
+  display: inline-block;
+  margin-top: 56px;
+  padding: 18px 42px;
+  background: var(--ink);
+  color: var(--pink);
+  font-size: 20px;
+  border-radius: 999px;
+  transition: transform .2s;
+}
+.btn:hover { transform: translateY(-3px); }
+
+/* big gradient "Aa" with APEX / TAIL tags */
+.type-art { position: relative; height: 480px; }
+.type-art .aa {
+  position: absolute;
+  left: 0; bottom: 70px;
+  font-size: 430px;
+  font-weight: 700;
+  line-height: .8;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #ecc8df 0%, #b58fd8 40%, #3d4a7c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.tag {
+  position: absolute;
+  padding: 8px 16px;
+  font-size: 12px;
+  letter-spacing: .16em;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.tag.apex { top: 0; left: 18%; background: var(--pink-soft); color: var(--ink); transform: rotate(5deg); }
+.tag.tail { bottom: 0; right: 4%; background: var(--navy); color: #fff; transform: rotate(4deg); }
+.type-art .dash-v {
+  position: absolute; left: 22%; top: 40px; height: 90px;
+  border-left: 2px dashed var(--pink);
+}
+.type-art .dash-t {
+  position: absolute; right: 9%; bottom: 36px; height: 50px;
+  border-left: 2px dashed var(--navy);
+}
+.type-art .baseline {
+  position: absolute; left: 4%; right: 6%; bottom: 62px;
+  border-top: 3px solid var(--blue-line);
+}
+
+/* ---------- 5. COLLECTION TABS (CSS-only, uses radio buttons) ---------- */
+.collection { max-width: 1280px; margin: 0 auto; padding: 40px 48px 100px; }
+.collection > input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+
+.section-title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.section-sub { font-weight: 300; font-size: 20px; margin-bottom: 32px; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+.tabs label {
+  cursor: pointer;
+  padding: 10px 26px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-size: 16px;
+  background: rgba(255,255,255,.7);
+  transition: background .2s, color .2s;
+}
+.tabs label:hover { background: var(--pink-soft); }
+
+/* active tab */
+#c-spring:checked ~ .tabs label[for="c-spring"],
+#c-summer:checked ~ .tabs label[for="c-summer"],
+#c-autumn:checked ~ .tabs label[for="c-autumn"],
+#c-winter:checked ~ .tabs label[for="c-winter"] {
+  background: var(--ink);
+  color: var(--pink);
+}
+
+/* show only the chosen collection */
+.gallery { display: none; }
+#c-spring:checked ~ .galleries .g-spring,
+#c-summer:checked ~ .galleries .g-summer,
+#c-autumn:checked ~ .galleries .g-autumn,
+#c-winter:checked ~ .galleries .g-winter { display: grid; }
+
+/* ---------- 6. POSTCARD GRID ---------- */
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 40px;
+}
+
+.card { perspective: 1200px; }
+.card:nth-child(3n+1) { transform: rotate(-2deg); }
+.card:nth-child(3n+2) { transform: rotate(1.5deg) translateY(24px); }
+.card:nth-child(3n)   { transform: rotate(-1deg); }
+.card { transition: transform .35s ease; }
+.card:hover, .card:focus { transform: rotate(0) translateY(-6px); outline: none; }
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.66%;              /* landscape 3:2. Use 150% for portrait (see README) */
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner,
+.card:focus .card-inner { transform: rotateY(180deg); }
+
+.face {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 14px 34px rgba(31, 45, 82, .16);
+  background: #fff;
+}
+
+/* FRONT: photo placeholder. Your image sits ON TOP of the dashed box. */
+.photo {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;                   /* crops to fill the card */
+  display: block;
+  z-index: 2;                          /* image layer, sits on top of the dashed box */
+}
+.placeholder {
+  position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px;
+  z-index: 1;                          /* shows only if no image is found */
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  gap: 6px;
+  border: 2px dashed var(--blue-line);
+  border-radius: calc(var(--radius) - 6px);
+  background: linear-gradient(160deg, #f7e6f0, #e3dcf3 55%, #d6e3f0);
+  color: var(--navy);
+  font-size: 14px;
+}
+.placeholder strong { font-size: 18px; font-weight: 600; }
+.placeholder small { font-size: 12px; opacity: .7; letter-spacing: .04em; }
+
+/* BACK: message side */
+.face.back {
+  transform: rotateY(180deg);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  background:
+    linear-gradient(90deg, transparent 58%, var(--pink) 58%, var(--pink) calc(58% + 2px), transparent calc(58% + 2px)),
+    #fffdfb;
+}
+.back .msg { font-size: 16px; font-weight: 300; align-self: start; }
+.back .stamp {
+  justify-self: end;
+  width: 64px; height: 78px;
+  border: 2px dashed var(--navy);
+  border-radius: 6px;
+  display: grid; place-items: center;
+  font-size: 10px; letter-spacing: .12em; color: var(--navy);
+}
+.back .lines { grid-column: 2; align-self: end; display: grid; gap: 14px; }
+.back .lines span { border-bottom: 1.5px solid var(--blue-line); height: 1px; }
+
+.caption {
+  margin-top: 18px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 15px;
+}
+.caption .pill {
+  padding: 4px 12px;
+  background: var(--pink-soft);
+  border-radius: 999px;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+}
+
+/* ---------- 7. ABOUT + FOOTER ---------- */
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px 100px;
+  text-align: center;
+}
+.about p { font-size: 22px; font-weight: 300; margin-top: 18px; }
+
+.footer {
+  text-align: center;
+  padding: 36px 20px 48px;
+  font-size: 14px;
+  border-top: 1px solid var(--ink);
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--steel));
+  background-size: 100% 6px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* ---------- 8. RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .hero { grid-template-columns: 1fr; }
+  .type-art { height: 380px; }
+  .type-art .aa { font-size: 320px; }
+}
+@media (max-width: 640px) {
+  .navbar { grid-template-columns: 1fr; justify-items: center; gap: 10px; padding: 14px 20px; }
+  .navbar .logo { order: -1; }
+  .navbar .links, .navbar .links.right { justify-content: center; gap: 18px; flex-wrap: wrap; }
+  .hero, .collection, .about { padding-left: 20px; padding-right: 20px; }
+  .gallery { grid-template-columns: 1fr; gap: 40px; }
+  .card:nth-child(n) { transform: none; }
+  .type-art .aa { font-size: 230px; }
+  .type-art { height: 300px; }
+}

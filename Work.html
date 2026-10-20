@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Work</title>
+<link href="web-css-style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<!--navbar-->
+  <header class="navbar">
+    <nav class="links">
+      <a href="Understanding Design Principles copy 2.html">Home</a>
+      <a href="Work.html">Work</a>
+    </nav>
+    <a href="#" class="logo">ka.</a>
+    <nav class="links right">
+      <a href="about-contact.html">About</a>
+      <a href="newexperiements.html">Experiments</a>
+    </nav>
+  </header>
+
+<!--hero section-->	
+	<section class="hero2">
+		<h1 style="font-size: 4em; font-weight: 400; color: rgba(255, 255, 255, 0.75);">My Work</h1>
+	    
+	
+	</section>
+
+<!--pal norte slideshow-->	
+	<section>
+		
+		<h1 class="pc-title">Pal' Norte</h1>
+		<p class="subtitle">Mexican Resturant</p>
+		
+		<br>
+		<hr class="pc-rule">
+		<br>
+	<!-- Slideshow container -->
+<div class="slideshow-container pc-frame" margin-top="4em">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 10</div>
+    <img src="images/palnorteicons-13.png" style="width:100%" alt="cover">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 10</div>
+    <img src="images/palnorteicons-14.png" style="width:100%" alt="cover">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 10</div>
+    <img src="images/palnorteicons-15.png" style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 10</div>
+    <img src="images/palnorteicons-16.png" style="width:100%" alt="cover">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 10</div>
+    <img src="images/palnorteicons-17.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 10</div>
+    <img src="images/palnorteicons-18.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 10</div>
+    <img src="images/palnorteicons-19.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 10</div>
+    <img src="images/palnorteicons-20.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 10</div>
+    <img src="images/palnorteicons-21.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <div class="mySlides fade">
+    <div class="numbertext">10 / 10</div>
+    <img src="images/palnorteicons-22.png"
+    style="width:100%" alt="cover">
+  </div>
+	
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+	
+  <h3>The Brief</h3>
+		<p>Pal’ Norte, meaning “to the north,” is a play on words that reflects a journey. For generations, “going north” has symbolized migration, sacrifice, hope, and the pursuit of opportunity. Yet the term is often reduced to politics, stereotypes, or statistics. This project seeks to reclaim and reframe that narrative, transforming it into something warm, celebratory, and human. At its core, Pal’ Norte is about honoring the immigrant journey through food, culture, and community.</p>
+		
+	
+		
+
+<!--JavaScript-->		
+	<script>
+		let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+		
+		
+		</script>
+		
+	
+	
+	</section>
+	
+	<section>
+		<h1 class="pc-title">Noval</h1>
+		<p class="subtitle">Reignite your spark to read</p>
+		<p class="pc-tags">
+		<br>
+		<hr class="pc-rule">
+		
+<!--image gallery-->
+		
+	
+    <div class="gallery">
+
+	<div class="gallery-item pc-card">
+ 		 <a target="_blank" href="images/Noval/Noval Social Post-01 copy.png">
+   			 <img src="images/Noval/Noval Social Post-01 copy.png" alt="Post1" width="600" height="400">
+  		 </a>
+	</div>
+
+<div class="gallery-item pc-card">
+  <a target="_blank" href="images/Noval/Noval Social Post-03 copy.png">
+    <img src="images/Noval/Noval Social Post-03 copy.png" alt="Northern Lights" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery-item pc-card">
+  <a target="_blank" href="images/Noval/Noval Social Post-04 copy.png">
+    <img src="images/Noval/Noval Social Post-04 copy.png" alt="Mountains" width="600" height="400">
+  </a>
+</div>
+		
+<div class="gallery-item pc-class">
+  <a target="_blank" href="images/Noval/Noval Social Post-06 copy.png">
+    <img src="images/Noval/Noval Social Post-06 copy.png" alt="Forest" width="600" height="400">
+  </a>
+</div>
+
+</div>
+	
+<h3>The Brief</h3>
+		<p font-size="2vm">Noval is a social book tracking app designed to keep readers motivated and engaged. By turning reading into a rewarding habit, Noval helps users stay consistent through daily streaks, personalized insights, and detailed statistics that reveal reading patterns over time. Which allows users to celebrate progress every step of the way. Noval also brings readers together through its community feature, allowing friends to share updates, compare progress, and encourage one another while reading the same book or exploring new genres. With Noval, we regnite your spark to read.</p>	
+	
+	
+	
+	</section>
+	
+<section>
+
+<footer class="footer">
+	<h3>Credits and Citations</h3>
+  <p>This website was created by Katie Aviles as a student project for ARTD 245: Web Design at North Central College in Naperville, IL, in 2026. All original graphics were created using Photoshop, Illustrator, or Procreate, the site was hand-coded using HTML and CSS in Dreamweaver, and partly assisted with Google Gemini and W3Schools.com. Text content and design theory are adapted from Flux Academy, Tilda Education, and Dribbble articles.<br>
+	
+	</p>
+</footer>
+	
+	
+	
+	
+	</section>	
+	
+	
+	
+	
+</body>
+</html>
